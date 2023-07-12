@@ -1,4 +1,4 @@
-#include "include/creature.h"
+#include "../include/creature.h"
 
 // static initialization
 mt19937 Creature::mt;

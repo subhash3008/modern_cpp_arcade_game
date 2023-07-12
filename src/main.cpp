@@ -3,7 +3,9 @@
 
 #include <string>
 #include "../include/constants.h"
-#include "../include/creature.h"
+// #include "../include/creature.h"
+#include "../include/background.h"
+#include "../include/ball.h"
 
 using namespace std;
 using namespace std::literals;
@@ -13,7 +15,16 @@ int main()
 	std::cout << "Hello\r\n" << std::endl;
 
 	// instantiate the creature
-	Creature the_creature(constants::window_width / 2.0, constants::window_height / 2.0);
+	// Creature the_creature(constants::window_width / 2.0, constants::window_height / 2.0);
+
+	// Create the background object
+	Background the_bg(0.0f, 0.0f);
+
+	// create the ball
+	Ball the_ball(
+		constants::window_width / 2.0f,
+		constants::window_height / 2.0f
+	);
 
 	// Create game window using SFML RenderWindow
 	sf::RenderWindow game_window{
@@ -27,7 +38,7 @@ int main()
 	while (game_window.isOpen())
 	{
 		// clear the screen
-		game_window.clear(sf::Color::Red);
+		game_window.clear(sf::Color::Black);
 
 		// Check for any event since last loop iteration
 		sf::Event event;
@@ -49,10 +60,15 @@ int main()
 		}
 
 		// calcualate the updated state of game
-		the_creature.update();
+		// the_creature.update();
+		the_bg.update();
+		the_ball.update();
 
 		// display the updated state of the game
-		the_creature.draw(game_window);
+		// the_creature.draw(game_window);
+		the_bg.draw(game_window);
+		the_ball.draw(game_window);
+		
 		game_window.display();
 	}
 

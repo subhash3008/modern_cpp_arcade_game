@@ -130,12 +130,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="creature.cpp" />
+    <ClCompile Include="src\background.cpp" />
+    <ClCompile Include="src\ball.cpp" />
+    <ClCompile Include="src\creature.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="constants.h" />
+    <ClInclude Include="include\background.h" />
+    <ClInclude Include="include\ball.h" />
+    <ClInclude Include="include\constants.h" />
     <ClInclude Include="include\creature.h" />
+    <ClInclude Include="include\entity.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
