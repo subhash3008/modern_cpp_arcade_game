@@ -6,6 +6,7 @@
 // #include "../include/creature.h"
 #include "../include/background.h"
 #include "../include/ball.h"
+#include "../include/paddle.h"
 
 using namespace std;
 using namespace std::literals;
@@ -24,6 +25,12 @@ int main()
 	Ball the_ball(
 		constants::window_width / 2.0f,
 		constants::window_height / 2.0f
+	);
+
+	// Create the paddle
+	Paddle the_paddle(
+		constants::window_width / 2.0f,
+		constants::window_height - constants::paddle_height * 2
 	);
 
 	// Create game window using SFML RenderWindow
@@ -63,11 +70,13 @@ int main()
 		// the_creature.update();
 		the_bg.update();
 		the_ball.update();
+		the_paddle.update();
 
 		// display the updated state of the game
 		// the_creature.draw(game_window);
 		the_bg.draw(game_window);
 		the_ball.draw(game_window);
+		the_paddle.draw(game_window);
 		
 		game_window.display();
 	}

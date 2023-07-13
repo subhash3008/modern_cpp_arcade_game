@@ -11,6 +11,11 @@ Ball::Ball(float x, float y) : MovingEntity()
 
   // set initial position
   this->sprite.setPosition(x, y);
+
+  // set size of the ball
+  this->sprite.scale(sf::Vector2f(.75f, .75f));
+
+  // set velocity of the ball
   this->velocity = {
     constants::ball_speed,
     constants::ball_speed
@@ -22,6 +27,33 @@ Ball::update()
 {
   // update the ball for new position
   this->sprite.move(this->velocity);
+
+  // adding rotation also gives floating effect
+  // this->sprite.setRotation(this->sprite.getRotation() + 5.0f);
+
+  // left boundary
+  if (this->getX() < 0)
+  {
+    this->velocity.x = -this->velocity.x;
+  }
+
+  // right boundary
+  if (this->getX() > (constants::window_width - 16))
+  {
+    this->velocity.x = -this->velocity.x;
+  }
+
+  // Top boundary
+  if (this->getY() < 0)
+  {
+    this->velocity.y = -this->velocity.y;
+  }
+
+  // Bottom Boundary
+  if (this->getY() > (constants::window_height - 16))
+  {
+    this->velocity.y = -this->velocity.y;
+  }
 }
 
 void
