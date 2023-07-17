@@ -13,8 +13,6 @@ using namespace std::literals;
 
 int main()
 {
-	std::cout << "Hello\r\n" << std::endl;
-
 	// instantiate the creature
 	// Creature the_creature(constants::window_width / 2.0, constants::window_height / 2.0);
 
@@ -29,8 +27,8 @@ int main()
 
 	// Create the paddle
 	Paddle the_paddle(
-		constants::window_width / 2.0f,
-		constants::window_height - constants::paddle_height * 2
+		((constants::window_width / 2.0f) - (constants::paddle_width / 2.0f)),
+		(constants::window_height - constants::paddle_height - 10.0f)
 	);
 
 	// Create game window using SFML RenderWindow

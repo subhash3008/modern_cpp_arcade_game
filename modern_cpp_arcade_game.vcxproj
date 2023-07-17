@@ -136,6 +136,7 @@
     <ClCompile Include="src\entity.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\paddle.cpp" />
+    <ClCompile Include="src\rounded_rectangle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\background.h" />
@@ -144,6 +145,7 @@
     <ClInclude Include="include\creature.h" />
     <ClInclude Include="include\entity.h" />
     <ClInclude Include="include\paddle.h" />
+    <ClInclude Include="include\rounded_rectangle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
