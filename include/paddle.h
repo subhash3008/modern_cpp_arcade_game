@@ -15,6 +15,11 @@ class Paddle : public MovingEntity
 
   static sf::RoundedRectangleShape padRect;
 
+  bool isPaddleMoving = false;
+
+  // respond to input from user keyboard
+  void processPlayerInput();
+
 public:
   // constructor to initialize paddle position
   Paddle(float x, float y);

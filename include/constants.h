@@ -8,6 +8,7 @@ struct constants
   static constexpr float ball_speed{ 5.0f };
   static constexpr float paddle_height{ 30.0f };
   static constexpr float paddle_width{ 350.0f };
+  static constexpr float paddle_speed{ 5.0f };
 };
 
 #endif // CONSTANTS_H
