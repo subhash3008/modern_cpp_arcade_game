@@ -59,6 +59,24 @@ Paddle::draw(sf::RenderWindow& window)
   window.draw(this->padRect);
 }
 
+void
+Paddle::moveUp() noexcept
+{
+  // do nothing
+}
+
+void
+Paddle::moveLeft() noexcept
+{
+  this->velocity.x = -(constants::paddle_speed);
+}
+
+void
+Paddle::moveRight() noexcept
+{
+  this->velocity.x = constants::paddle_speed;
+}
+
 
 // respond to user input via key press
 void

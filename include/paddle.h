@@ -27,6 +27,10 @@ public:
   // implement pure virtual functions
   void update() override;
   void draw(sf::RenderWindow& window) override;
+
+  void moveUp() noexcept override;
+  void moveLeft() noexcept override;
+  void moveRight() noexcept override;
 };
 
 #endif // PADDLE_H

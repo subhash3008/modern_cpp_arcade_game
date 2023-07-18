@@ -38,6 +38,10 @@ protected:
 
 public:
   // inherited functions to be implemented
+
+  virtual void moveUp() noexcept = 0;
+  virtual void moveLeft() noexcept = 0;
+  virtual void moveRight() noexcept = 0;
 };
 
 #endif // ENTITY_H

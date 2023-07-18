@@ -18,6 +18,10 @@ public:
   void update() override;
   void draw(sf::RenderWindow& window) override;
 
+  void moveUp() noexcept override;
+  void moveLeft() noexcept override;
+  void moveRight() noexcept override;
+
 };
 
 #endif // BALL_H

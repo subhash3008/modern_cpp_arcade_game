@@ -134,6 +134,7 @@
     <ClCompile Include="src\ball.cpp" />
     <ClCompile Include="src\creature.cpp" />
     <ClCompile Include="src\entity.cpp" />
+    <ClCompile Include="src\interactions.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\paddle.cpp" />
     <ClCompile Include="src\rounded_rectangle.cpp" />
@@ -144,6 +145,7 @@
     <ClInclude Include="include\constants.h" />
     <ClInclude Include="include\creature.h" />
     <ClInclude Include="include\entity.h" />
+    <ClInclude Include="include\interactions.h" />
     <ClInclude Include="include\paddle.h" />
     <ClInclude Include="include\rounded_rectangle.h" />
   </ItemGroup>

@@ -62,3 +62,21 @@ Ball::draw(sf::RenderWindow& window)
   // draw the buffer window
   window.draw(this->sprite);
 }
+
+void
+Ball::moveUp() noexcept
+{
+  this->velocity.y = -(constants::ball_speed);
+}
+
+void
+Ball::moveLeft() noexcept
+{
+  this->velocity.x = -(constants::ball_speed);
+}
+
+void
+Ball::moveRight() noexcept
+{
+  this->velocity.x = -(constants::ball_speed);
+}

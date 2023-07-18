@@ -7,6 +7,7 @@
 #include "../include/background.h"
 #include "../include/ball.h"
 #include "../include/paddle.h"
+#include "../include/interactions.h"
 
 using namespace std;
 using namespace std::literals;
@@ -69,6 +70,7 @@ int main()
 		the_bg.update();
 		the_ball.update();
 		the_paddle.update();
+		handleCollision(the_ball, the_paddle);
 
 		// display the updated state of the game
 		// the_creature.draw(game_window);
